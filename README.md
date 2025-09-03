@@ -72,6 +72,7 @@ The dataset contains **20,765** entries and **22** features, including:
 6. **Review behavior**
    - Employed pair plots to explore relationships among `number_of_reviews`, `price`, and `availability_365`.
 
+**Source:** [Dataset](https://github.com/AyushMaurya13/AirBnb_listing_analisis_EDA/blob/main/datasets.csv)
 ### 3) Data Visualization (Summary)
 
 - **Pair plots:** Relationships among price, availability, and reviews.
