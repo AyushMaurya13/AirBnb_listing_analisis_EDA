@@ -39,8 +39,6 @@ The dataset contains **20,765** entries and **22** features, including:
 - `availability_365`: Number of days available in a year
 - `last_review`: Date of the most recent review
 
-> **Source:** Replace this line with your data source/link.
-
 ---
 
 ## Steps and Workflow
