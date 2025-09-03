@@ -38,7 +38,7 @@ The dataset contains **20,765** entries and **22** features, including:
 - `reviews_per_month`: Average monthly reviews
 - `availability_365`: Number of days available in a year
 - `last_review`: Date of the most recent review
-**Source:** [Dataset](https://github.com/AyushMaurya13/AirBnb_listing_analisis_EDA/blob/main/datasets.csv)
+- **Source:** [Dataset](https://github.com/AyushMaurya13/AirBnb_listing_analisis_EDA/blob/main/datasets.csv)
 ---
 
 ## Steps and Workflow
