@@ -122,17 +122,7 @@ The dataset contains **20,765** entries and **22** features, including:
 - Perform **sentiment analysis** on review text to quantify guest experience.
 - Build an **interactive dashboard** (Plotly Dash/Streamlit/Tableau) for live exploration and monitoring.
 
----
-
-## Reproducibility (Quick Start)
-
-```bash
-# 1) Create and activate a virtual environment
-python -m venv .venv
-source .venv/bin/activate  # On Windows: .venv\Scripts\activate
-
-# 2) Install dependencies
-pip install -r requirements.txt
-
-# 3) Run the notebook/app
-jupyter lab  # or: streamlit run app.py
+## Contact
+<u>
+** LinkedIN: [LinkedIn](https://www.linkedin.com/in/ayush-kumar-maurya-a43914258/)<br>
+** Twitter/X: [X](https://x.com/ayush_maur10241)
