@@ -123,6 +123,6 @@ The dataset contains **20,765** entries and **22** features, including:
 - Build an **interactive dashboard** (Plotly Dash/Streamlit/Tableau) for live exploration and monitoring.
 
 ## Contact
-<u>
-- ** LinkedIN: [LinkedIn](https://www.linkedin.com/in/ayush-kumar-maurya-a43914258/)<br>
-- ** Twitter/X: [X](https://x.com/ayush_maur10241)
+
+- **LinkedIn:** [LinkedIn](https://www.linkedin.com/in/ayush-kumar-maurya-a43914258/)
+- **Twitter/X:** [X](https://x.com/ayush_maur10241)
