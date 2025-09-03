@@ -1,108 +1,138 @@
-# Airbnb Listing EDA Project: New York 2024
+# Airbnb Listing EDA – New York 2024
+
 ---
+
 ## Project Overview
-<u>
-This project perform Exploratory Data Analysis(EDA) on New York Airbnb data to uncover trends and patterns in rental listing. We use library like Pandas, Numpy, Matplotlib, Seaborn cleaning, visualization and analysis.
-<img src="https://www.brandinginasia.com/wp-content/uploads/2017/04/sddefault-8.jpg" alt="Image" width="1100" height="550">
+
+This project performs Exploratory Data Analysis (EDA) on New York City Airbnb listings to uncover trends and patterns in rental supply and pricing. We use Python libraries such as **pandas**, **NumPy**, **Matplotlib**, and **Seaborn** for cleaning, visualization, and analysis.
+
+<img src="https://www.brandinginasia.com/wp-content/uploads/2017/04/sddefault-8.jpg" alt="Airbnb EDA">
+
+
 ---
 
-## Objective
+## Objectives
 
-<u>
-The goal of this project is to:
+The goals of this project are to:
 
-1. Analyze room types, prices, and availability across different neighborhoods.
+1. Analyze room types, prices, and availability across neighborhoods and boroughs.
 2. Understand host behavior and listing patterns.
 3. Detect potential outliers in prices.
-4. Provide recommendations for guests and hosts based on insights.
+4. Provide actionable recommendations for guests and hosts based on insights.
+
 ---
 
 ## Dataset
-The dataset contains 20,765 entries and 22 features, including:
-<u>
-** id: Unique identifier for each listing
-** name: Title of the Airbnb listing
-** host_name: Name of the host
-** neighborhood_group: Group (borough) where the listing is located
-** latitude/longitude: Geolocation of listings
-** price: Nightly rental price
-** room_type: Type of accommodation (e.g., entire home, private room)
-** reviews_per_month: Average monthly reviews for the listing
-** availability_365: Number of available days in the year
+
+The dataset contains **20,765** entries and **22** features, including:
+
+- `id`: Unique identifier for each listing
+- `name`: Title of the Airbnb listing
+- `host_name`: Name of the host
+- `neighborhood_group`: Borough where the listing is located
+- `neighborhood`: Neighborhood of the listing
+- `latitude`, `longitude`: Geolocation of listings
+- `price`: Nightly rental price (USD)
+- `room_type`: Type of accommodation (e.g., entire home/apt, private room)
+- `number_of_reviews`: Total number of reviews
+- `reviews_per_month`: Average monthly reviews
+- `availability_365`: Number of days available in a year
+- `last_review`: Date of the most recent review
+
+> **Source:** Replace this line with your data source/link.
+
 ---
 
 ## Steps and Workflow
-<u>
-### 1. Data Cleaning
-** Handle missing data: price, neighborhood, and beds columns had null values.
-** Fix data types: Converted last_review to a datetime object.
-** Remove outliers: Listings with prices > $1,000 were capped to avoid skewed visualizations.
-### 2. EDA (Exploratory Data Analysis)
-1. Room type distribution:
 
-** Visualized the count of each room type using bar plots.
-** Identified Entire home/apt as the most common room type.
-2. Neighborhood group insights:
+### 1) Data Cleaning
 
-** Analyzed price variations by boroughs.
-** Manhattan had the highest average prices.
-3. Availability trends:
-   
-** Used heatmaps to show correlations among price, availability_365, number_of_reviews, and beds.
-4. Price distribution:
+- Handled missing data in `price`, `neighborhood`, and `beds`.
+- Fixed data types (e.g., converted `last_review` to `datetime`).
+- Treated outliers by capping extremely high prices (e.g., values > $1,000) to reduce skew in visuals.
 
-** Used histograms to show the distribution of prices.
-** Majority of the listings were priced between $50 - $300.
-5.Host listings:
+### 2) Exploratory Data Analysis (EDA)
 
-** Analyzed hosts with multiple listings using boxplots to identify key contributors.
-6.Review behavior:
+1. **Room type distribution**
+   - Visualized counts using bar plots.
+   - Identified **Entire home/apt** as the most common room type.
 
-** Used pair plots to show relationships between number of reviews, price, and availability.
-3. Data Visualization
-Pairplot: To see correlations among price, availability, and number of reviews.
-Heatmap: Showing correlations among numerical features.
-Histograms and Boxplots: To detect outliers in price.
-Bar Charts: Displaying room types and neighborhood group distributions.
+2. **Neighborhood group (borough) insights**
+   - Compared average prices across boroughs.
+   - **Manhattan** shows the highest mean price.
+
+3. **Availability trends**
+   - Used correlation heatmaps among `price`, `availability_365`, `number_of_reviews`, and `beds`.
+
+4. **Price distribution**
+   - Plotted histograms and boxplots to inspect skewness and outliers.
+   - Majority of listings fall in the **$50–$300** range.
+
+5. **Host-level patterns**
+   - Used boxplots/grouped views to analyze hosts with multiple listings.
+
+6. **Review behavior**
+   - Employed pair plots to explore relationships among `number_of_reviews`, `price`, and `availability_365`.
+
+### 3) Data Visualization (Summary)
+
+- **Pair plots:** Relationships among price, availability, and reviews.
+- **Heatmaps:** Correlations among numerical features.
+- **Histograms & Boxplots:** Price distribution and outliers.
+- **Bar Charts:** Room types and borough distributions.
+
 ---
 
 ## Key Findings and Insights
-<u>
-### 1. Price Trends:
 
-** Manhattan has the most expensive listings, followed by Brooklyn.
-** Entire homes/apartments cost significantly more than private or shared rooms.
-### 2. Room Type Distribution:
+### 1) Price Trends
 
-** Entire homes/apartments are the most common, but private rooms offer budget-friendly options.
-### 3.Outliers in Price:
+- **Manhattan** has the most expensive listings, followed by **Brooklyn**.
+- **Entire homes/apartments** cost significantly more than private or shared rooms.
 
-** Few listings priced at $10,000+ were detected, indicating the need to filter such extreme values.
-### 4.Availability Patterns:
+### 2) Room Type Distribution
 
-** Listings with high availability tend to have lower prices and more reviews, likely due to better guest experience.
-### 5.Host Behavior:
+- Entire homes/apartments are most common; **private rooms** offer more budget-friendly options.
 
-** Some hosts manage multiple listings, indicating a trend toward professional hosting.
+### 3) Outliers in Price
+
+- A small number of listings priced above **$10,000** were detected; filtering or capping is recommended for robust analysis.
+
+### 4) Availability Patterns
+
+- Listings with **high availability** tend to have **lower prices** and often accumulate **more reviews**, possibly reflecting stronger demand at competitive prices.
+
+### 5) Host Behavior
+
+- Some hosts manage **multiple listings**, indicating a trend toward professional hosting.
+
 ---
 
+## Recommendations
+
+- **Guests:** Consider private rooms in Brooklyn or Queens for value; apply price filters around the $50–$300 range.
+- **Hosts:** Benchmark against neighborhood medians; avoid extreme pricing without clear differentiators; monitor availability and adjust pricing dynamically.
+- **Analysts:** Cap extreme outliers before modeling; stratify analysis by borough and room type.
+
+---
 
 ## Future Work
-<u>
-** Use machine learning to predict prices based on room type and location.
-** Perform sentiment analysis on reviews to better understand guest experiences.
-** Create an interactive dashboard using Plotly or Tableau for live monitoring.
+
+- Train ML models (e.g., regularized regression, gradient boosting) to **predict price** from features like location, room type, and availability.
+- Perform **sentiment analysis** on review text to quantify guest experience.
+- Build an **interactive dashboard** (Plotly Dash/Streamlit/Tableau) for live exploration and monitoring.
+
 ---
 
-## Conclusion
-<u>
-This project offers valuable insights into the New York Airbnb market, helping both guests and hosts make informed decisions. By using EDA techniques, we identified key trends and developed actionable recommendations. Future improvements can involve advanced analytics and predictive modeling to further enhance the findings.
----
+## Reproducibility (Quick Start)
 
-## License
-This project is open-source and licensed under the [MIT Licence](https://mit-license.org/). Feel free to use and modify the code.
----
+```bash
+# 1) Create and activate a virtual environment
+python -m venv .venv
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 
-## Contact
-** LinkedIn: [LinkedIn](https://www.linkedin.com/in/ayush-kumar-maurya-a43914258/)
-** Twitter/X: [X](https://x.com/ayush_maur10241)
+# 2) Install dependencies
+pip install -r requirements.txt
+
+# 3) Run the notebook/app
+jupyter lab  # or: streamlit run app.py
